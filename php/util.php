@@ -90,7 +90,7 @@ class Util{
      * テーブルに既に該当dataが登録されているか確認
      * @param 検索条件
      * @return boolean 
-            存在する場合はtrue 存在しない場合false
+     *       存在する場合はtrue 存在しない場合false
      */
     public function check_exists($var){
         $sql = "
@@ -189,14 +189,14 @@ class Util{
     public function print_log($msg){
 
         //ログファイルは生成済みのイメージ
-        /** 
-            //ログファイル名設定例 
-            $prefix = "error"; 
-            $date   = date("Ymd_His");
-            $this->log_file_name = "${prefix}_${date}.log";
-            $this->log_file_path = $log_dir.$this->log_file_name;
+        /* 
+         *   //ログファイル名設定例 
+         *   $prefix = "error"; 
+         *   $date   = date("Ymd_His");
+         *   $this->log_file_name = "${prefix}_${date}.log";
+         *   $this->log_file_path = $log_dir.$this->log_file_name;
         */
-
+ 
         //整形
         $now     = date("Y-m-d H:i:s");
         $out_msg = "${now} : $msg \n";
