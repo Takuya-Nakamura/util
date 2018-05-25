@@ -7,12 +7,6 @@
 # 複数行は """ コメント """ ''' コメント '''
 #
 #
-#
-#
-
-
-
-import MySQLdb as my
 import MySQLdb.cursors
 from  pprint import pprint  as pp
 from  datetime import datetime
@@ -31,7 +25,7 @@ class Util:
             cursorclass=my.cursors.DictCursor
         )
         return con
-    #end db_connect
+    #end def db_connect
 
 
     """ log関連 """
@@ -40,6 +34,8 @@ class Util:
         now = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
         pp("%s %s" %(now, msg))
 
-  
+    ## end def log
 
-    ## python  
+
+
+## class
