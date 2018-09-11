@@ -286,12 +286,25 @@ class Util{
 
     }
 
+//sort     
+    /**
+    * 二次元配列ソート
+    * @param 対象配列, キー項目名
+    * @return ソート済み配列
+    */
+    private function sort_nijigen($arr, $col_name){
+    
+        //sort用配列の作成
+        $sort = []; 
+        foreach($arr AS $key => $value){
+            $sort[$key] = $value[$col_name];
+        }
+       
+        //実行
+        array_multisort($sort, SORT_DESC, $arr); 
+        return $arr;
+    }
 
-
-
-
-
-      
 
 
 }
