@@ -143,11 +143,20 @@ class Util{
         date ("Y-m-d", strtotime("2018-3-1") ); //指定日
         date ("Y-m-d", strtotime("2018-3-1 -1 month")) //指定日からさらに計算       
 
-        //月基準の日付け文字列
+            
+      /****月基準の日付け文字列 ****/
         $month       = date("Y-m", $datetime); //yyyy-mmまで
         $month_begin = date("Y-m-01 00:00:00", $datetime); //月初
         $month_end   = date("Y-m-t 23:59:59", $datetime);  //月末
+        
+        //昨月、翌月の取得
+        $month = date('Y-m'); //文字列で与えてもOK
+        $last_month = date('Y-m', strtotime("$month -1 month"));
+        $next_month = date('Y-m', strtotime("$month +1 month"));
 
+        //当月判定
+        if($month == date("Y-m")){
+        }
     }
 
     /**
@@ -180,6 +189,9 @@ class Util{
     }
 
 
+        
+        
+    
 
 //log関連
     /**
